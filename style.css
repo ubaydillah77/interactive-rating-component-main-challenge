@@ -1,0 +1,218 @@
+:root {
+    /* Primary */
+    --orange: rgb(251, 116, 19);
+
+    /* Neutral */
+    --white: #fff;
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-secondary: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Overpass", sans-serif;
+    font-weight: 400;
+    color: var(--white);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+p {
+    font-size: 0.95rem;
+}
+
+.main {
+    min-height: 100vh;
+    background: var(--very-dark-blue);
+
+    margin: auto;
+    display: grid;
+    place-items: center;
+}
+
+.rating {
+    width: 400px;
+    height: 420px;
+    background-image: linear-gradient(
+        175deg,
+        var(--dark-blue) 0%,
+        var(--very-dark-blue) 120%
+    );
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper__img {
+    width: 50px;
+    height: 50px;
+    background: rgb(149, 158, 172, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.rating__title {
+    color: var(--white);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 2rem;
+}
+
+.rating__text {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-weight: normal;
+    color: var(--medium-secondary);
+}
+
+.form__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0 2rem;
+}
+
+.label {
+    background: rgb(149, 158, 172, 0.1);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--light-grey);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.label:hover {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.active {
+    background: rgb(149, 158, 172);
+    color: var(--white);
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 0.8rem 0;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    background-color: var(--orange);
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+/* ================== Thank you ========================= */
+
+.thankyou__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.wrapper__img--thankyou {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.thankyou__selected {
+    margin-top: 2rem;
+    width: 200px;
+    display: inline;
+    color: rgb(251, 116, 19, 0.6);
+
+    text-align: center;
+    padding: 0.4rem 1rem;
+    background: rgb(149, 158, 172, 0.1);
+    border-radius: 5rem;
+}
+
+.thankyou__title {
+    margin-top: 2rem;
+}
+
+/* ================== FOOTER ============================ */
+
+.attribution {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: var(--orange);
+}
+
+.loader__container {
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid var(--orange);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .rating {
+        width: 340px;
+        height: 420px;
+        background-image: linear-gradient(
+            175deg,
+            var(--dark-blue) 0%,
+            var(--very-dark-blue) 120%
+        );
+        padding: 2rem;
+        border-radius: 30px;
+        box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.5);
+    }
+}
